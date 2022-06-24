@@ -1,8 +1,7 @@
 import React from 'react';
-import PreAssignmentGuide from './pages/PreAssignmentGuide';
 
 function App() {
-  return <PreAssignmentGuide />;
+  return <h1>Foo</h1>
 }
 
 export default App;
