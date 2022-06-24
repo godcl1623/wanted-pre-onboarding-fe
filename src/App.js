@@ -1,7 +1,8 @@
 import React from 'react';
+import Login from './components/Login/Login';
 
 function App() {
-  return <h1>Foo</h1>
+  return <Login />;
 }
 
 export default App;
