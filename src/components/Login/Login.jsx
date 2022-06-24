@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Styled from 'styled-components';
 
 const Login = () => {
   return (
-    <main id="container-login-global" style={{width: '470px', height: '100%', border: '1px solid var(--color-border)', margin: '0 auto', backgroundColor: 'var(--color-white'}}>
+    <article id="container-login-global" style={{width: '470px', height: '100%', border: '1px solid var(--color-border)', margin: '0 auto', backgroundColor: 'var(--color-white'}}>
       <section id="container-login">
         <section id="container-logo">
           <img src="/assets/logo.png" alt="logo" />
@@ -37,7 +38,7 @@ const Login = () => {
           <img src="/assets/anddown.png" alt="GooglePlay Download" />
         </section>
       </section>
-    </main>
+    </article>
   );
 };
 
