@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --color-border: #DBDBDB;
     --color-white: #FFFFFF;
     --color-font: #8E8E9D;
+    --color-font2: #8e8e8e;
   }
   * {
     box-sizing:border-box;
