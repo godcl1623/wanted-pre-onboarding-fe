@@ -8,7 +8,7 @@ function App() {
   // return <Main child={<Login />} />;
   return (
     <>
-      <Gnb />
+      {/* <Gnb /> */}
       <Main child={<Login />} />
     </>
   );
