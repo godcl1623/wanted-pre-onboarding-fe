@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   input {
     font-size: 12px;
   }
-  button, input[type="submit"] {
+  button, input[type="submit"], .svg, span {
     cursor: pointer;
   }
 `;
