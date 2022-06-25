@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Gnb />
-      <Main child={<Feeds />} />
+      <Main child={<Login />} />
     </>
   );
 }

@@ -29,12 +29,13 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     color: purple;
+    text-decoration: none;
     cursor: pointer;
   }
   input {
     font-size: 12px;
   }
-  button, input[type="submit"], .svg, span {
+  button, input[type="submit"], .svg {
     cursor: pointer;
   }
 `;
