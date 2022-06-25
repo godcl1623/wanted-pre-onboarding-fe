@@ -1,79 +1,88 @@
 import React from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
-import { AiOutlineSmile, AiOutlineHeart } from 'react-icons/ai';
-import { FaRegPaperPlane, FaRegBookmark } from 'react-icons/fa';
-import { TbMessageCircle2 } from 'react-icons/tb';
+import { AiOutlineSmile } from 'react-icons/ai';
+import { FaRegBookmark, FaUserCircle } from 'react-icons/fa';
+import { TbMessageCircle2, TbHeart, TbSend, TbBookmark } from 'react-icons/tb';
+import * as FeedsStyled from './style/FeedsStyled';
 
 const Feeds = () => {
   return (
-    <article className="container-feeds">
-      <section className="container-heading-feeds">
-        <section className="container-user_info-heading-feeds">
-          <section className="container-icon-heading-feeds">
-            <div>
-              <img src="" alt="user_icon" />
-            </div>
+    <Article className="container-feeds">
+      <FeedsHeading className="container-heading-feeds">
+        <UserInfoCnt className="container-user_info-heading-feeds">
+          <ImgWrapper className="img_wrapper">
+            {/* <img src="" alt="user_icon" /> */}
+            <div className="img_wrapper2"></div>
+            <FaUserCircle fontSize="2rem" className="user_icon svg" />
+          </ImgWrapper>
+          <UserId className="user_id svg">user_id</UserId>
+        </UserInfoCnt>
+        <BiDotsHorizontalRounded fontSize="1.5rem" className="svg" />
+      </FeedsHeading>
+      <div className="img_dummy" />
+      <IconsCnt className="container-activities-heading-feeds">
+        <IconsMenu className="container-icons_menu-heading-feeds">
+          <section className="container-icons-heading-feeds">
+            <Button className="btn-like">
+              <TbHeart className="svg" />
+            </Button>
+            <Button className="btn-cmt">
+              <TbMessageCircle2 className="svg" />
+            </Button>
+            <Button className="btn-send">
+              < TbSend className="svg" />
+            </Button>
           </section>
-          { /* 컴포넌트화 */}
-          <section className="container-user_id-heading-feeds">
-            <span className="user_id">user_id</span>
-          </section>
-        </section>
-        <section className="container-more_menu-heading-feeds">
-          <BiDotsHorizontalRounded fontSize="1.5rem" />
-        </section>
-      </section>
-      <section className="container-user_pic-heading-feeds">
-        <img src="" alt="user_pic" />
-      </section>
-      <section className="container-user_post-heading-feeds">
-        <section className="container-icons-heading-feeds">
-          <section className="container-icons_menu-heading-feeds">
-            <button className="btn-like">
-              <AiOutlineHeart />
-            </button>
-            <button className="btn-cmt">
-              <TbMessageCircle2 />
-            </button>
-            <button className="btn-send">
-              <FaRegPaperPlane />
-            </button>
-          </section>
-          <section className="container-icon_save-heading-feeds">
-            <FaRegBookmark />
-          </section>
-        </section>
-        <section className="container-likes_counter-heading-feeds">
-          좋아요 n개
-        </section>
-        <section className="container-user_post-heading-feeds">
-          <span className="user_id">user_id</span>
-          <p className="user_posts">posts</p>
-          <span className="tags">#tags</span>
-        </section>
-        <section className="container-user_cmts_cnt-heading-feeds">
-          <section className="container-user_cmts-heading-feeds">
-            <span className="friend_id">friend_id</span>
-            <p className="user_comments">comments</p>
-            <span className="comments_like"><AiOutlineHeart /></span>
-          </section>
-        </section>
-      </section>
-      <section className="container-user_cmts_input-heading-feeds">
-        <section className="container-emoticons-heading-feeds">
-          <button>
-            <AiOutlineSmile />
-          </button>
-        </section>
-        <section className="container-form_cmts-heading-feeds">
-          <form className="form-comments">
-            <input type="text" name="input_cmts" placeholder="댓글 달기..." />
-            <input type="submit" name="smt_cmts" value="게시" />
-          </form>
-        </section>
-      </section>
-    </article>
+          <FaRegBookmark className="svg" />
+        </IconsMenu>
+        <LikesCnt className="container-likes_counter-heading-feeds">
+          <span className="likes_counter">
+            좋아요 n개
+          </span>
+        </LikesCnt>
+      </IconsCnt>
+      <UserPost className="container-user_post-heading-feeds">
+        <UserId className="user_id svg">user_id</UserId>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus ac interdum elit, eu condimentum felis.
+        Morbi scelerisque metus ut leo.
+        <Tags className="tags">#tags</Tags>
+      </UserPost>
+      <UserCmts className="container-user_cmts_cnt-heading-feeds">
+        <UserId className="friend_id">friend_id</UserId>
+        <p className="user_comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <CmtsLike className="comments_like"><TbHeart className="svg"/></CmtsLike>
+      </UserCmts>
+      <CmtsInput className="container-user_cmts_input-heading-feeds">
+        <Button>
+          <AiOutlineSmile className="svg" />
+        </Button>
+        <Form className="form-comments">
+          <Input type="text" name="input_cmts" placeholder="댓글 달기..." />
+          <Input type="submit" name="smt_cmts" value="게시" />
+        </Form>
+      </CmtsInput>
+    </Article>
   );
 };
 
 export default Feeds;
+
+const {
+  Article,
+  FeedsHeading,
+  UserInfoCnt,
+  ImgWrapper,
+  UserId,
+  IconsCnt,
+  IconsMenu,
+  Button,
+  LikesCnt,
+  UserPost,
+  Tags,
+  UserCmts,
+  CmtsLike,
+  CmtsInput,
+  Form,
+  Input
+} = FeedsStyled;
