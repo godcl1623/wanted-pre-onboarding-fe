@@ -27,9 +27,13 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     color: purple;
+    cursor: pointer;
   }
   input {
     font-size: 12px;
+  }
+  button, input[type="submit"] {
+    cursor: pointer;
   }
 `;
 
