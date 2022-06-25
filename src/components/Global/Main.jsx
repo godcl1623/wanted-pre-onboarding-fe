@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = ({ child }) => {
   return (
-    <main>
+    <main style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       { child }
     </main>
   );
