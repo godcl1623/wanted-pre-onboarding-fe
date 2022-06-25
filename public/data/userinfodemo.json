@@ -1,0 +1,17 @@
+{
+  "0": {
+    "id": "root",
+    "pwd": "0000",
+    "nickname": "root"
+  },
+  "1": {
+    "id": "tasker",
+    "pwd": "0101",
+    "nickname": "tasker"
+  },
+  "2": {
+    "id": "taskee",
+    "pwd": "1010",
+    "nickname": "taskee"
+  }
+}

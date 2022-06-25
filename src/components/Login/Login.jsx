@@ -1,14 +1,32 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 import * as LoginStyles from './style/LoginStyled';
+import * as LoginLogics from './logic/LoginLogic';
 
-const Login = () => {
+const Login = props => {
+  function submitHandler(event) {
+    event.preventDefault();
+    const userInfo = extractUserInfo(event);
+    saveToLS(userInfo);
+    signinUser(userInfo, props);
+  }
+
+  useEffect(() => {
+    const savedUserInfo = JSON.parse(decryptLSVal());
+    if (savedUserInfo) {
+      signinUser(savedUserInfo, props);
+    }
+  }, []);
+
   return (
     <Article id="container-login-global">
       <LoginCnt id="container-login">
         <LogoCnt id="container-logo">
           <img src="/assets/logo.png" alt="logo" />
         </LogoCnt>
-        <Form id="login-form">
+        <Form
+          id="login-form"
+          onSubmit={submitHandler}
+        >
           <Input
             type="text"
             name="user_id"
@@ -72,3 +90,10 @@ const {
   Span,
   Hr
 } = LoginStyles;
+
+const {
+  decryptLSVal,
+  signinUser,
+  saveToLS,
+  extractUserInfo
+} = LoginLogics;
