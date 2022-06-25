@@ -4,7 +4,13 @@ import { AiOutlineCompass, AiOutlineHeart, AiFillHome } from 'react-icons/ai';
 import { FaRegPaperPlane } from 'react-icons/fa';
 import * as GnbStyled from './style/GnbStyled';
 
-const Gnb = () => {
+const Gnb = ({ setLoginStat }) => {
+  function handleClick(event) {
+    alert('로그아웃 되었습니다.');
+    localStorage.removeItem('auth');
+    setLoginStat(false);
+  }
+
   return (
     <Nav
       id="global-nav"
@@ -35,7 +41,12 @@ const Gnb = () => {
           <a id="icon-activity">
             <AiOutlineHeart className="svg"  />
           </a>
-          <button id="btn-logout">Logout</button>
+          <button
+            id="btn-logout"
+            onClick={handleClick}
+          >
+            Logout
+          </button>
         </Ul>
       </Section>
     </Nav>

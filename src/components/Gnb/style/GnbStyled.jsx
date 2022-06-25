@@ -25,7 +25,9 @@ export const Section = Styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  img, form, ul {
+    border: 1px solid black;
+  }
   img {
     height: 30px;
   }
@@ -34,9 +36,9 @@ export const Section = Styled.section`
 export const Form = Styled.form`
   border-radius: 5px;
   padding: 5px 15px;
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   height: 40px;
   display: flex;
   justify-content: center;

@@ -29,14 +29,14 @@ const getAuthRes = (db, ipt) => {
 }
 
 export const signinUser = (ipt, props) => {
-  const { signedUser, loginStat } = props;
+  const { signedUser, setLoginStat } = props;
   getAuthDb()
     .then(res => {
       const result = getAuthRes(res.data, ipt);
       if (result) {
         signedUser.current.id = result.id;
         signedUser.current.nickname = result.nickname;
-        loginStat(true);
+        setLoginStat(true);
       } else {
         alert('사용자 정보가 일치하지 않습니다');
       }
