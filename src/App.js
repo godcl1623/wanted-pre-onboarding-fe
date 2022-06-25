@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Main from './components/Global/Main';
 import Login from './components/Login/Login';
 import Gnb from './components/Gnb/Gnb';
 import Feeds from './components/Feeds/Feeds';
 
 function App() {
-  // return <Main child={<Login />} />;
+  const userInfo = useRef({ id: '', nickname: '' });
+  const [loginStat, setLoginStat] = useState(false);
+  const [currentComp, setCurrentComp] = useState(<Login signedUser={userInfo} loginStat={setLoginStat} />);
+  useEffect(() => {
+    if (loginStat) {
+      setCurrentComp(<Feeds signedUser={userInfo} />);
+    }
+  }, [loginStat]);
   return (
     <>
-      {/* <Gnb /> */}
-      <Main child={<Login />} />
+      { loginStat ? <Gnb /> : '' }
+      <Main child={currentComp} />
     </>
   );
 }
