@@ -1,11 +1,19 @@
 import React from 'react';
+import Styled from 'styled-components';
 
 const Main = ({ child }) => {
   return (
-    <main style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <StyledMain>
       { child }
-    </main>
+    </StyledMain>
   );
 }
 
 export default Main;
+
+const StyledMain = Styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

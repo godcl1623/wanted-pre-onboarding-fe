@@ -5,8 +5,13 @@ import Gnb from './components/Gnb/Gnb';
 import Feeds from './components/Feeds/Feeds';
 
 function App() {
-  return <Main child={<Login />} />;
-  // return <Login />
+  // return <Main child={<Login />} />;
+  return (
+    <>
+      <Gnb />
+      <Main child={<Feeds />} />
+    </>
+  );
 }
 
 export default App;

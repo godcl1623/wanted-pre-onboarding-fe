@@ -5,8 +5,10 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   :root {
     --color-bg: #FAFAFA;
+    --color-bg2: #EFEFEF;
     --color-border: #DBDBDB;
     --color-white: #FFFFFF;
+    --color-black: #262626;
     --color-font: #8E8E9D;
     --color-font2: #8e8e8e;
     --color-highlight: #0095F6;
