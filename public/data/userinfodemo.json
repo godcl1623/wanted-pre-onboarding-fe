@@ -1,17 +1,17 @@
 {
   "0": {
-    "id": "root",
-    "pwd": "0000",
+    "id": "root@root.com",
+    "pwd": "1Q2w3e4r!",
     "nickname": "root"
   },
   "1": {
-    "id": "tasker",
-    "pwd": "0101",
+    "id": "tasker@email.net",
+    "pwd": "1q2W3e4r@",
     "nickname": "tasker"
   },
   "2": {
-    "id": "taskee",
-    "pwd": "1010",
+    "id": "taskee@mail.org",
+    "pwd": "1q2w3E4r#",
     "nickname": "taskee"
   }
 }
