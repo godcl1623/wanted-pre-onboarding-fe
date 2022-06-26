@@ -11,6 +11,7 @@ import Styled from 'styled-components';
 
 // article
 export const Article = Styled.article`
+  margin-bottom: 20px;
   border: 1px solid var(--color-border);
   border-radius: 15px;
   width: 500px;
@@ -23,6 +24,9 @@ export const Article = Styled.article`
     width: 100%;
     height: 500px;
     background-color: var(--color-border);
+  }
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 // section
@@ -51,6 +55,9 @@ export const IconsCnt = Styled.section`
   button {
     margin-right: 15px;
   }
+  button:last-child {
+    margin-right: 0;
+  }
 `;
 export const IconsMenu = Styled.section`
   margin-bottom: 10px;
@@ -62,18 +69,21 @@ export const LikesCnt = Styled.section`
   display: flex;
   align-items: center;
   background-color: var(--color-white);
-  span {
-    font-size: 14px;
-    font-weight: bold;
-  }
+  font-size: 14px;
+  font-weight: bold;
 `;
 export const UserPost = Styled.section`
   padding: 5px 16px;
   background-color: var(--color-white);
+  font-size: 14px;
 `;
 export const UserCmts = Styled(UserPost)`
   padding-bottom: 10px;
   display: flex;
+  flex-direction: column;
+  section {
+    display: flex;
+  }
   p {
     font-weight: normal;
   }
@@ -121,7 +131,9 @@ export const UserId = Styled.span`
 `;
 export const Tags = Styled.span`
   margin-left: 5px;
+  font-size: 14px;
   color: purple;
+  cursor: pointer;
 `;
 export const CmtsLike = Styled.span`
   margin-left: auto;

@@ -35,6 +35,7 @@ export const Nav = Styled.nav`
     justify-content: flex-end;
   }
   @media (max-width: 600px) {
+    padding: 0 10px;
     input {
       display: none;
     }
@@ -62,10 +63,7 @@ export const Ul = Styled.ul`
     fill: var(--color-black);
     font-size: 1.5rem;
   }
-  a {
-    margin-right: 15px;
-  }
-  button {
+  a, button {
     margin-right: 15px;
   }
   button#icon-new_post {
@@ -78,5 +76,13 @@ export const Ul = Styled.ul`
     background-color: tomato;
     font-weight: bold;
     color: var(--color-white);
+  }
+  @media (max-width: 600px) {
+    a, button {
+      margin-right: 5px;
+    }
+    button:last-child {
+      padding: 5px 10px;
+    }
   }
 `;

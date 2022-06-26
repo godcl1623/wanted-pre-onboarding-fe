@@ -1,0 +1,71 @@
+{
+  "0": {
+    "id": "0",
+    "author": {
+      "profile": "",
+      "nickname": "root"
+    },
+    "postInfo": {
+      "picture": "https://source.unsplash.com/random/600x500",
+      "likes": "5",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac interdum elit, eu condimentum felis. Morbi scelerisque metus ut leo.",
+      "tags": ["Lorem", "Ipsum", "Dolor"]
+    },
+    "comments": [
+      {
+        "author": "tasker",
+        "comment": "Lorem lorem ipsum"
+      },
+      {
+        "author": "taskee",
+        "comment": "Ipsum ipsum dolor"
+      }
+    ]
+  },
+  "1": {
+    "id": "1",
+    "author": {
+      "profile": "",
+      "nickname": "tasker"
+    },
+    "postInfo": {
+      "picture": "https://source.unsplash.com/random/900x500",
+      "likes": "17",
+      "text": "Sed non leo fringilla, auctor leo at, viverra quam. Nulla.",
+      "tags": ["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "성공적"]
+    },
+    "comments": [
+      {
+        "author": "root",
+        "comment": "Lorem lorem ipsum"
+      },
+      {
+        "author": "taskee",
+        "comment": "Ipsum ipsum dolor"
+      }
+    ]
+  },
+  "2": {
+    "id": "2",
+    "author": {
+      "profile": "",
+      "nickname": "taskee"
+    },
+    "postInfo": {
+      "picture": "https://source.unsplash.com/random/700x1080",
+      "likes": "0",
+      "text": "Curabitur fermentum convallis elit vel vulputate.\nDonec pulvinar auctor nunc.\nSed ullamcorper dignissim quam, ac.\n",
+      "tags": []
+    },
+    "comments": [
+      {
+        "author": "root",
+        "comment": "Lorem lorem ipsum"
+      },
+      {
+        "author": "tasker",
+        "comment": "Ipsum ipsum dolor"
+      }
+    ]
+  }
+}
