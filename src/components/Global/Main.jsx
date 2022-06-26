@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Styled from 'styled-components';
 
-const Main = ({ child }) => {
+const Main = ({ child, loginStat }) => {
   return (
-    <StyledMain>
+    <StyledMain flag={loginStat}>
       { child }
     </StyledMain>
   );
@@ -12,8 +12,10 @@ const Main = ({ child }) => {
 export default Main;
 
 const StyledMain = Styled.main`
+  padding-top: ${props => props.flag ? '30px' : '0'};
+  height: ${props => props.flag ? 'max-content' : '100%'};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: ${props => props.flag ? 'space-around' : 'center'};
   align-items: center;
 `;

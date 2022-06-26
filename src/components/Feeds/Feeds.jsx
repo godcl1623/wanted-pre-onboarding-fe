@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { AiOutlineSmile } from 'react-icons/ai';
 import { FaRegBookmark, FaUserCircle } from 'react-icons/fa';
 import { TbMessageCircle2, TbHeart, TbSend, TbBookmark } from 'react-icons/tb';
 import * as FeedsStyled from './style/FeedsStyled';
 
-const Feeds = () => {
+const Feeds = ({ signedUser, feedData }) => {
+  useEffect(() => {
+    console.log(feedData)
+  }, [])
   return (
     <Article className="container-feeds">
       <FeedsHeading className="container-heading-feeds">

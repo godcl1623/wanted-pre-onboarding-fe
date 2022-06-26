@@ -11,6 +11,7 @@ import Styled from 'styled-components';
 
 // article
 export const Article = Styled.article`
+  margin-bottom: 20px;
   border: 1px solid var(--color-border);
   border-radius: 15px;
   width: 500px;
