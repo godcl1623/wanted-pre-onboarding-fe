@@ -15,16 +15,13 @@ const Gnb = ({ setLoginStat }) => {
     <Nav
       id="global-nav"
     >
-      <Section
-        id="container-nav-contents"
-      >
+      <section className="area_delimiter">
         <img src="/assets/logo.png" alt="logo" />
-        <Form
-          id="search-form"
-        >
-          <BsSearch className="svg" />
-          <Input type="text" id="search-input" placeholder="검색" />
-        </Form>
+      </section>
+      <section className="area_delimiter">
+        <Input type="text" id="search-input" placeholder="검색" />
+      </section>
+      <section className="area_delimiter">
         <Ul id="list-icons">
           <a id="icon-home">
             <AiFillHome className="svg" />
@@ -48,7 +45,7 @@ const Gnb = ({ setLoginStat }) => {
             Logout
           </button>
         </Ul>
-      </Section>
+      </section>
     </Nav>
   );
 };

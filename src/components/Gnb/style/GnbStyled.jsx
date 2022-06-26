@@ -11,47 +11,44 @@ import Styled from 'styled-components';
 // nav
 export const Nav = Styled.nav`
   border-bottom: 1px solid var(--color-border);
+  padding: 0 20px;
   position: sticky;
   top: 0;
   width: 100%;
   height: 60px;
   display: flex;
-  align-items: center;
-`;
-// section
-export const Section = Styled.section`
-  padding: 0 20px;
-  width: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  img, form, ul {
-    border: 1px solid black;
-  }
+  background-color: var(--color-white);
+  z-index: 10;
   img {
     height: 30px;
   }
-`;
-// form
-export const Form = Styled.form`
-  border-radius: 5px;
-  padding: 5px 15px;
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-bg2);
-  .svg {
-    fill: var(--color-font2);
+  .area_delimiter {
+    width: 100%;
+    display: flex;
+  }
+  .area_delimiter:nth-child(2) {
+    justify-content: center;
+  }
+  .area_delimiter:last-child {
+    justify-content: flex-end;
+  }
+  @media (max-width: 600px) {
+    input {
+      display: none;
+    }
   }
 `;
 // input
 export const Input = Styled.input`
   margin-left: 10px;
-  height: 30px;
+  border-radius: 10px;
+  padding: 5px 25px;
+  width: 100%;
+  max-width: 270px;
+  min-width: 150px;
+  height: 35px;
   background-color: var(--color-bg2);
   font-size: 16px;
   font-weight: normal;

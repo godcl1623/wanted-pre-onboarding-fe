@@ -18,6 +18,7 @@ export const Article = Styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 0;
   .img_dummy {
     width: 100%;
     height: 500px;
