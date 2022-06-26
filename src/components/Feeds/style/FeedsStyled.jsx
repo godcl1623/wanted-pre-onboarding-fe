@@ -75,6 +75,10 @@ export const UserPost = Styled.section`
 export const UserCmts = Styled(UserPost)`
   padding-bottom: 10px;
   display: flex;
+  flex-direction: column;
+  section {
+    display: flex;
+  }
   p {
     font-weight: normal;
   }
@@ -122,7 +126,9 @@ export const UserId = Styled.span`
 `;
 export const Tags = Styled.span`
   margin-left: 5px;
+  font-size: 14px;
   color: purple;
+  cursor: pointer;
 `;
 export const CmtsLike = Styled.span`
   margin-left: auto;

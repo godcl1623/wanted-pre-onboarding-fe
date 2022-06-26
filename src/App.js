@@ -23,10 +23,11 @@ function App() {
     );
   useEffect(() => {
     if (loginStat) {
-      navigate('/main');
       axios
         .get('/data/feedsdb.json')
-        .then((res) => setFeedsData(Object.values(res.data)));
+        .then((res) => setFeedsData(Object.values(res.data)))
+        .then(() => navigate('/main'))
+        .catch(err => new Error(err));
     } else {
       navigate('/');
     }
