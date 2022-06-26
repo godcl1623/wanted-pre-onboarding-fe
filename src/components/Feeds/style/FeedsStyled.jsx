@@ -25,6 +25,9 @@ export const Article = Styled.article`
     height: 500px;
     background-color: var(--color-border);
   }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 // section
 export const FeedsHeading = Styled.section`
@@ -52,6 +55,9 @@ export const IconsCnt = Styled.section`
   button {
     margin-right: 15px;
   }
+  button:last-child {
+    margin-right: 0;
+  }
 `;
 export const IconsMenu = Styled.section`
   margin-bottom: 10px;
@@ -63,14 +69,13 @@ export const LikesCnt = Styled.section`
   display: flex;
   align-items: center;
   background-color: var(--color-white);
-  span {
-    font-size: 14px;
-    font-weight: bold;
-  }
+  font-size: 14px;
+  font-weight: bold;
 `;
 export const UserPost = Styled.section`
   padding: 5px 16px;
   background-color: var(--color-white);
+  font-size: 14px;
 `;
 export const UserCmts = Styled(UserPost)`
   padding-bottom: 10px;

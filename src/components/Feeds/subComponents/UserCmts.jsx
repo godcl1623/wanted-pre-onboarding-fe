@@ -1,12 +1,11 @@
 import React from 'react';
 import { UserCmts as EmptyUserCmts } from '../style/FeedsStyled';
-import UserId from './UserId';
+import Comment from './UserCmts/Comment';
 
-const UserCmts = () => {
+const UserCmts = ({dataArray, className}) => {
   return (
-    <EmptyUserCmts>
-      <UserId />
-      <p></p>
+    <EmptyUserCmts className={className}>
+      <Comment dataArray={dataArray} />
     </EmptyUserCmts>
   );
 };

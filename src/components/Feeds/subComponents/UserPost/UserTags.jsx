@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tags } from '../style/FeedsStyled';
+import { Tags } from '../../style/FeedsStyled';
 
 const UserTags = ({ dataArray }) => {
   return dataArray.map((tag, idx) => {

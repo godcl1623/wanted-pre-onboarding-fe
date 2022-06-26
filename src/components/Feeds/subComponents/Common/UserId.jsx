@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserId as EmptyUserId } from '../style/FeedsStyled';
+import { UserId as EmptyUserId } from '../../style/FeedsStyled';
 
 const UserId = ({ className, value }) => {
   return (
