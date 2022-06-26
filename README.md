@@ -22,7 +22,7 @@
   <summary>관련 자료</summary>
   <div markdown="1">
 
-  - Login 컴포넌트 관련 디렉토리 [링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/tree/main/src/components/Login)
+  - Login 컴포넌트 관련 디렉토리 ([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/tree/main/src/components/Login))
     - ![LoginDir](https://user-images.githubusercontent.com/20578093/175815111-25644bac-54e8-4e73-8c1b-118a1b6246bb.png)
   - 데스크톱 화면
     ![Login](https://user-images.githubusercontent.com/20578093/175815087-bcbcea33-8ab2-405a-b019-0f462629239b.png)
@@ -66,7 +66,7 @@
   <summary>관련 자료</summary>
   <div markdown="1">
   
-  - GNB 디렉토리 [링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/tree/main/src/components/Gnb)
+  - GNB 디렉토리 ([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/tree/main/src/components/Gnb))
     - ![GmbDir](https://user-images.githubusercontent.com/20578093/175815828-15344c40-2e4d-4b5b-a06f-49d786397180.png)
   - 데스크톱 화면
     ![Gnb](https://user-images.githubusercontent.com/20578093/175815856-e19a4e7a-70db-4fa9-b9e2-bfff408930c0.png)
@@ -107,7 +107,7 @@
 - `regex.test()` 메소드를 사용해 유효성 검사를 진행했습니다.
 
 ### 2. 입력된 정보의 DB 등록 여부 검사
-- public 폴더에 userinfodemo.json([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/public/data/userinfodemo.json)) 파일을 만들어 사용자 정보를 저장했습니다.
+- public 폴더에 userinfodemo.json ([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/public/data/userinfodemo.json)) 파일을 만들어 사용자 정보를 저장했습니다.
 - 양식
   - 기본적으로 숫자를 인덱스로 사용해 사용자 정보를 저장합니다.
   - 사용자 정보는 id, pwd, nickname이 저장되어 있습니다.
@@ -116,7 +116,7 @@
   - 정보가 존재할 경우 Local Storage에 저장하는 한편, `loginState` 상태를 `true`로 바꾸며 메인 페이지로 이동하게 됩니다.
   - 정보가 존재하지 않을 경우 `alert()`을 통해 사용자 정보가 존재하지 않는다고 알립니다.
 
-### 3. 유효성 검사를 통과하지 못한 경우를 CSS로 표현 [링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/src/components/Login/Login.jsx)
+### 3. 유효성 검사를 통과하지 못한 경우를 CSS로 표현 ([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/src/components/Login/Login.jsx))
 - 유효성 검사는 불일치할 경우 다음 2가지로 나타냅니다.
   - 입력 `input`: 값을 입력한 후 `input`에서 포커스가 제거될 때 유효성 검사를 진행, 불일치할 경우 `border`를 빨간색으로 변경합니다.
   - `submit` 버튼: 기본적으로 `opacity`를 부여해 흐리게 처리, `pointer-events` 속성을 `none`으로 설정해 클릭을 방지합니다.
@@ -141,7 +141,7 @@
 - 주요 과제
   - 로그인, 로그아웃 시 라우팅 로직을 통해 페이지가 이동하도록 구현(단, history push 사용 금지)
 
-- 답안 [링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/src/App.js)
+- 답안 ([링크](https://github.com/godcl1623/wanted-pre-onboarding-fe/blob/main/src/App.js))
   - react-router-dom의 Routes, Route, useNavigate를 사용해 라우팅을 구현했습니다.
   - Login 컴포넌트는 주소를 `/`, 메인 컴포넌트는 주소를 `/main`으로 설정했습니다.
   - 로그인 유효성 검사, 인증을 통과해 `loginStat` 상태가 `true`로 변할 경우, `useNavigate().navigate()` 메소드를 사용해 주소를 이동합니다.
