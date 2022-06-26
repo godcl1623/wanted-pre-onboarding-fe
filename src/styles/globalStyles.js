@@ -35,8 +35,18 @@ const GlobalStyles = createGlobalStyle`
   input {
     font-size: 12px;
   }
+  input:focus {
+    border-color: var(--color-highlight);
+  }
   button, input[type="submit"], .svg {
     cursor: pointer;
+  }
+  .disabled {
+    filter: opacity(0.3);
+    pointer-events: none;
+  }
+  .invalid {
+    border: 2px solid red;
   }
 `;
 
