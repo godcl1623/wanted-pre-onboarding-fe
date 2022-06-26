@@ -5,10 +5,10 @@ const UserTags = ({ dataArray }) => {
   return dataArray.map((tag, idx) => {
     return (
       <Tags className="tags" key={`tags_${idx}`}>
-        # { tag }
+        # {tag}
       </Tags>
     );
-  })
+  });
 };
 
 export default UserTags;

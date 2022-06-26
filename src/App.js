@@ -8,30 +8,33 @@ import Feeds from './components/Feeds/Feeds';
 
 function App() {
   const userInfo = useRef({ id: '', nickname: '' });
+
   const [loginStat, setLoginStat] = useState(false);
   const [feedsData, setFeedsData] = useState();
+
   const navigate = useNavigate();
+
   const loginComp = <Login signedUser={userInfo} setLoginStat={setLoginStat} />;
-  const feedsComp = feedsData
-    ? (
-      feedsData.map((data, idx) => (
-        <Feeds key={idx} signedUser={userInfo} feedData={data} />
-      ))
-    ) 
-    : (
-      <Feeds signedUser={userInfo} />
-    );
+  const feedsComp = feedsData ? (
+    feedsData.map((data, idx) => (
+      <Feeds key={idx} signedUser={userInfo} feedData={data} />
+    ))
+  ) : (
+    <Feeds signedUser={userInfo} />
+  );
+
   useEffect(() => {
     if (loginStat) {
       axios
         .get('/data/feedsdb.json')
         .then((res) => setFeedsData(Object.values(res.data)))
         .then(() => navigate('/main'))
-        .catch(err => new Error(err));
+        .catch((err) => new Error(err));
     } else {
       navigate('/');
     }
   }, [loginStat]);
+
   return (
     <>
       <Routes>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsSearch, BsPlusSquare } from 'react-icons/bs';
+import { BsPlusSquare } from 'react-icons/bs';
 import { AiOutlineCompass, AiOutlineHeart, AiFillHome } from 'react-icons/ai';
 import { FaRegPaperPlane } from 'react-icons/fa';
 import * as GnbStyled from './style/GnbStyled';
@@ -12,9 +12,7 @@ const Gnb = ({ setLoginStat }) => {
   }
 
   return (
-    <Nav
-      id="global-nav"
-    >
+    <Nav id="global-nav">
       <section className="area_delimiter">
         <a href="/">
           <img src="/assets/logo.png" alt="logo" />
@@ -38,12 +36,9 @@ const Gnb = ({ setLoginStat }) => {
             <AiOutlineCompass className="svg" />
           </a>
           <a id="icon-activity">
-            <AiOutlineHeart className="svg"  />
+            <AiOutlineHeart className="svg" />
           </a>
-          <button
-            id="btn-logout"
-            onClick={handleClick}
-          >
+          <button id="btn-logout" onClick={handleClick}>
             Logout
           </button>
         </Ul>
@@ -54,10 +49,4 @@ const Gnb = ({ setLoginStat }) => {
 
 export default Gnb;
 
-const {
-  Nav,
-  Section,
-  Form,
-  Input,
-  Ul
-} = GnbStyled;
+const { Nav, Section, Form, Input, Ul } = GnbStyled;

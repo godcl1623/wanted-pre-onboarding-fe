@@ -7,7 +7,7 @@ const UserPost = ({ author, text, dataArray }) => {
   return (
     <EmptyPost>
       <UserId className="user_id svg" value={author} />
-      { text }
+      {text}
       <UserTags dataArray={dataArray} />
     </EmptyPost>
   );

@@ -8,11 +8,11 @@ const IconsMenu = () => {
   return (
     <EmptyIcons>
       <section>
-        { leftIcons.map((icon, idx) => {
+        {leftIcons.map((icon, idx) => {
           const IconComponent = icon;
           return (
             <Button key={`icon_${idx}`}>
-              <IconComponent className="svg"/>
+              <IconComponent className="svg" />
             </Button>
           );
         })}

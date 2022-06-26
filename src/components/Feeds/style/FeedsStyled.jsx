@@ -1,6 +1,5 @@
 import Styled from 'styled-components';
 
-
 /*
   # 스타일 기준
   1. 박스 계층(margin, border, padding)
@@ -20,15 +19,18 @@ export const Article = Styled.article`
   flex-direction: column;
   justify-content: center;
   z-index: 0;
+
   .img_dummy {
     width: 100%;
     height: 500px;
     background-color: var(--color-border);
   }
+
   @media (max-width: 600px) {
     width: 100%;
   }
 `;
+
 // section
 export const FeedsHeading = Styled.section`
   border-radius: 15px 15px 0 0;
@@ -39,31 +41,38 @@ export const FeedsHeading = Styled.section`
   align-items: center;
   background-color: var(--color-white);
 `;
+
 export const UserInfoCnt = Styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+
 export const IconsCnt = Styled.section`
   padding: 10px;
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
+
   .svg {
     font-size: 1.5625rem;
   }
+
   button {
     margin-right: 15px;
   }
+
   button:last-child {
     margin-right: 0;
   }
 `;
+
 export const IconsMenu = Styled.section`
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 `;
+
 export const LikesCnt = Styled.section`
   padding: 0 6px;
   display: flex;
@@ -72,30 +81,37 @@ export const LikesCnt = Styled.section`
   font-size: 14px;
   font-weight: bold;
 `;
+
 export const UserPost = Styled.section`
   padding: 5px 16px;
   background-color: var(--color-white);
   font-size: 14px;
 `;
+
 export const UserCmts = Styled(UserPost)`
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
+
   section {
     display: flex;
   }
+
   p {
     font-weight: normal;
   }
 `;
+
 export const CmtsInput = Styled(FeedsHeading)`
   border-top: 1px solid var(--color-border);
   border-radius: 0 0 15px 15px;
+
   .svg {
     margin-right: 15px;
     font-size: 2.5rem;
   }
 `;
+
 // div
 export const ImgWrapper = Styled.div`
   margin-right: 10px;
@@ -109,6 +125,7 @@ export const ImgWrapper = Styled.div`
   align-items: center;
   background: rgb(244,241,2);
   background: linear-gradient(90deg, rgba(244,241,2,1) 0%, rgba(253,29,29,1) 50%, rgba(241,69,252,1) 100%);
+
   div {
     border-radius: 50%;
     position: absolute;
@@ -120,42 +137,51 @@ export const ImgWrapper = Styled.div`
     background-color: var(--color-white);
     z-index: 0;
   }
+
   .user_icon {
     z-index: 1;
   }
 `;
+
 // span
 export const UserId = Styled.span`
   margin-right: 10px;
   font-weight: bold;
 `;
+
 export const Tags = Styled.span`
   margin-left: 5px;
   font-size: 14px;
   color: purple;
   cursor: pointer;
 `;
+
 export const CmtsLike = Styled.span`
   margin-left: auto;
 `;
+
 // form
 export const Form = Styled.form`
   width: 100%;
+
   input[name='input_cmts'] {
     width: calc(100% - 50px);
   }
+
   input[name='smt_cmts'] {
     width: 50px;
     background-color: var(--color-white);
     color: var(--color-highlight);
   }
 `;
+
 // input
 export const Input = Styled.input`
   height: 40px;
   font-size: 16px;
   font-weight: normal;
 `;
+
 // button
 export const Button = Styled.button`
   padding: 0;

@@ -21,19 +21,24 @@ export const Nav = Styled.nav`
   align-items: center;
   background-color: var(--color-white);
   z-index: 10;
+
   img {
     height: 30px;
   }
+
   .area_delimiter {
     width: 100%;
     display: flex;
   }
+
   .area_delimiter:nth-child(2) {
     justify-content: center;
   }
+
   .area_delimiter:last-child {
     justify-content: flex-end;
   }
+
   @media (max-width: 600px) {
     padding: 0 10px;
     input {
@@ -41,6 +46,7 @@ export const Nav = Styled.nav`
     }
   }
 `;
+
 // input
 export const Input = Styled.input`
   margin-left: 10px;

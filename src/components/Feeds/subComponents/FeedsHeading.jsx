@@ -2,7 +2,11 @@ import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import UserId from './Common/UserId';
-import { FeedsHeading as EmptyHeading, UserInfoCnt, ImgWrapper } from '../style/FeedsStyled';
+import {
+  FeedsHeading as EmptyHeading,
+  UserInfoCnt,
+  ImgWrapper,
+} from '../style/FeedsStyled';
 
 const FeedsHeading = ({ author }) => {
   return (
