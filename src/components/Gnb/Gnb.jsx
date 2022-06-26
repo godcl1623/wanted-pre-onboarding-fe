@@ -16,7 +16,9 @@ const Gnb = ({ setLoginStat }) => {
       id="global-nav"
     >
       <section className="area_delimiter">
-        <img src="/assets/logo.png" alt="logo" />
+        <a href="/">
+          <img src="/assets/logo.png" alt="logo" />
+        </a>
       </section>
       <section className="area_delimiter">
         <Input type="text" id="search-input" placeholder="검색" />

@@ -14,9 +14,9 @@ const GlobalStyles = createGlobalStyle`
     --color-highlight: #0095F6;
   }
   * {
-    box-sizing:border-box;
-    outline:none;
-    border:none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
   }
   html, body, #root, main {
     width: 100%;
