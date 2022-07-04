@@ -88,7 +88,7 @@ export const Form = Styled.form`
 `;
 
 export const Input = Styled.input`
-  margin-bottom: ${(props) => props.marginBottom || '7px'};
+  margin-bottom: ${(props = '7px') => props.marginBottom};
   border: 1px solid var(--color-border);
   border-radius: 3px;
   padding: 10px;

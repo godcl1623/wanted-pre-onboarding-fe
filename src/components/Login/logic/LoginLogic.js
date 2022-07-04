@@ -21,10 +21,13 @@ const getAuthDb = async () => {
   );
 };
 
-const getAuthRes = (db, ipt) => {
-  const authRes = Object.values(db).find(
+const checkAuthRes = (db, ipt) =>
+  Object.values(db).find(
     (userInfo) => userInfo.id === ipt.id && userInfo.pwd === ipt.pwd
   );
+
+const getAuthRes = (db, ipt) => {
+  const authRes = checkAuthRes(db, ipt);
   let result = false;
   if (authRes != null) {
     result = { id: authRes.id, nickname: authRes.nickname };

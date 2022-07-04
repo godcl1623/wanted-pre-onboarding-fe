@@ -10,14 +10,22 @@ const Feeds = ({ signedUser, feedData }) => {
     setCmtTo((prevCmt) => [...prevCmt, newIpt]);
   };
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const newComment = {
+  const clearInput = (event) => {
+    event.target[0].value = '';
+  };
+
+  const makeNewCmt = (event) => {
+    return {
       author: signedUser.current.nickname,
       comment: event.target[0].value,
-    };
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const newComment = makeNewCmt(event);
     addNewCmt(newComment);
-    event.target[0].value = '';
+    clearInput(event);
   }
 
   useEffect(() => {
@@ -39,7 +47,7 @@ const Feeds = ({ signedUser, feedData }) => {
       text={isImgLoaded ? postInfo.text : ''}
       tags={isImgLoaded ? postInfo.tags : []}
       cmtList={isImgLoaded ? comments.concat(prevCmt) : []}
-      handleSubmit={isImgLoaded ? handleSubmit : (() => {})}
+      handleSubmit={isImgLoaded ? handleSubmit : () => {}}
     />
   );
 };
