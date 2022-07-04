@@ -22,7 +22,7 @@ export const Article = Styled.article`
   }
 `;
 
-export const FeedsHeading = Styled.section`
+export const EmptyHeading = Styled.section`
   border-radius: 15px 15px 0 0;
   padding: 10px;
   height: 60px;
@@ -38,7 +38,7 @@ export const UserInfoCnt = Styled.section`
   align-items: center;
 `;
 
-export const IconsCnt = Styled.section`
+export const ViewerActivityMenu = Styled.section`
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ export const IconsCnt = Styled.section`
   }
 `;
 
-export const IconsMenu = Styled.section`
+export const EmptyIconsCnt = Styled.section`
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -72,13 +72,13 @@ export const LikesCnt = Styled.section`
   font-weight: bold;
 `;
 
-export const UserPost = Styled.section`
+export const EmptyPost = Styled.section`
   padding: 5px 16px;
   background-color: var(--color-white);
   font-size: 14px;
 `;
 
-export const UserCmts = Styled(UserPost)`
+export const EmptyUserCmts = Styled(EmptyPost)`
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ export const UserCmts = Styled(UserPost)`
   }
 `;
 
-export const CmtsInput = Styled(FeedsHeading)`
+export const EmptyInput = Styled(EmptyHeading)`
   border-top: 1px solid var(--color-border);
   border-radius: 0 0 15px 15px;
 
@@ -132,19 +132,19 @@ export const ImgWrapper = Styled.div`
   }
 `;
 
-export const UserId = Styled.span`
+export const EmptyUserId = Styled.span`
   margin-right: 10px;
   font-weight: bold;
 `;
 
-export const Tags = Styled.span`
+export const TagsCnt = Styled.span`
   margin-left: 5px;
   font-size: 14px;
   color: purple;
   cursor: pointer;
 `;
 
-export const CmtsLike = Styled.span`
+export const CmtsLikeIconWrapper = Styled.span`
   margin-left: auto;
 `;
 

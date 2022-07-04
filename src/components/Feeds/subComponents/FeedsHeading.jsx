@@ -3,7 +3,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import UserId from './Common/UserId';
 import {
-  FeedsHeading as EmptyHeading,
+  EmptyHeading,
   UserInfoCnt,
   ImgWrapper,
 } from '../style/FeedsStyled';

@@ -14,7 +14,7 @@ const EmptyFeeds = (props) => {
     <Article className="container-feeds">
       <FeedsHeading author={nickname} />
       <PostImg src={src} />
-      <IconsCnt
+      <ViewerActivityMenu
         className="container-activi
       ties-heading-feeds"
       >
@@ -22,7 +22,7 @@ const EmptyFeeds = (props) => {
         <LikesCnt className="container-likes_counter-heading-feeds">
           좋아요 {likes}개
         </LikesCnt>
-      </IconsCnt>
+      </ViewerActivityMenu>
       <UserPost author={nickname} text={text} dataArray={tags} />
       <UserCmts dataArray={cmtList} />
       <CmtsInput handleSubmit={handleSubmit} />
@@ -32,4 +32,4 @@ const EmptyFeeds = (props) => {
 
 export default EmptyFeeds;
 
-const { Article, IconsCnt, LikesCnt } = FeedsStyled;
+const { Article, ViewerActivityMenu, LikesCnt } = FeedsStyled;

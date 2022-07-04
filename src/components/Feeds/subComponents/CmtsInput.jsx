@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineSmile } from 'react-icons/ai';
 import {
-  CmtsInput as EmptyInput,
+  EmptyInput,
   Button,
   Form,
   Input,

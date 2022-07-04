@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPost as EmptyPost } from '../style/FeedsStyled';
+import { EmptyPost } from '../style/FeedsStyled';
 import UserId from './Common/UserId';
 import UserTags from './UserPost/UserTags';
 

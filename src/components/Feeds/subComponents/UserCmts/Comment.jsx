@@ -1,7 +1,7 @@
 import React from 'react';
 import { TbHeart } from 'react-icons/tb';
 import UserId from '../Common/UserId';
-import { CmtsLike } from '../../style/FeedsStyled';
+import { CmtsLikeIconWrapper } from '../../style/FeedsStyled';
 
 const ComponentLists = ({ dataArray }) => {
   return dataArray.map((cmt, idx) => {
@@ -10,9 +10,9 @@ const ComponentLists = ({ dataArray }) => {
       <section key={`cmts_${idx}`}>
         <UserId value={author} />
         <p>{comment}</p>
-        <CmtsLike>
+        <CmtsLikeIconWrapper>
           <TbHeart />
-        </CmtsLike>
+        </CmtsLikeIconWrapper>
       </section>
     );
   });

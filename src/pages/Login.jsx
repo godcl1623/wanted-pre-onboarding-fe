@@ -7,10 +7,10 @@ import * as LoginStyles from '../components/Login/style/LoginStyled';
 import * as LoginLogics from '../components/Login/logic/LoginLogic';
 
 const Login = (props) => {
-  const inputId = useRef();
-  const inputPwd = useRef();
-  const inputIdEle = useRef();
-  const inputPwdEle = useRef();
+  const inputIdVal = useRef();
+  const inputPwdVal = useRef();
+  const inputEleId = useRef();
+  const inputElePwd = useRef();
 
   const [isIdValid, setIdValid] = useState();
   const [isPwdValid, setPwdValid] = useState();
@@ -25,31 +25,31 @@ const Login = (props) => {
 
   function handleChange(event) {
     if (event.target.name === 'user_id') {
-      inputId.current = event.currentTarget.value;
+      inputIdVal.current = event.currentTarget.value;
     } else if (event.target.name === 'password') {
-      inputPwd.current = event.currentTarget.value;
+      inputPwdVal.current = event.currentTarget.value;
     }
   }
 
   function handleBlur(event) {
-    const validationTarget =
-      event.target.name === 'user_id' ? inputId.current : inputPwd.current;
+    const validStandard = event.target.name === 'user_id';
+    const validationTarget = validStandard ? inputIdVal.current : inputPwdVal.current;
     if (validateInputVal(event.target.name, validationTarget) === false) {
-      event.target.name === 'user_id' ? setIdValid(false) : setPwdValid(false);
+      validStandard ? setIdValid(false) : setPwdValid(false);
     } else {
-      event.target.name === 'user_id' ? setIdValid(true) : setPwdValid(true);
+      validStandard ? setIdValid(true) : setPwdValid(true);
     }
   }
 
   function disableEnter(event) {
     if (event.code === 'Enter') {
       event.preventDefault();
-      inputIdEle.current.blur();
-      inputPwdEle.current.blur();
+      inputEleId.current.blur();
+      inputElePwd.current.blur();
     }
   }
 
-  const refs = { inputIdEle, inputPwdEle };
+  const refs = { inputEleId, inputElePwd };
   const states = { isIdValid, isPwdValid, isValidationPassed };
   const handlers = { handleSubmit, handleChange, handleBlur };
 
