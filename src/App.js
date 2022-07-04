@@ -17,7 +17,7 @@ function App() {
   const loginComp = <Login signedUser={userInfo} setLoginStat={setLoginStat} />;
   const feedsComp = feedsData ? (
     feedsData.map((data, idx) => (
-      <Feeds key={idx} signedUser={userInfo} feedData={data} />
+      <Feeds key={`${data}_${idx}`} signedUser={userInfo} feedData={data} />
     ))
   ) : (
     <Feeds signedUser={userInfo} />

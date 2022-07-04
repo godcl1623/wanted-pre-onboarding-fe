@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import LoginForm from '../components/Login/subComponents/LoginForm';
 import AltLogin from '../components/Login/subComponents/AltLogin';
 import AppDown from '../components/Login/subComponents/AppDown';
@@ -87,7 +88,7 @@ const Login = (props) => {
       </LoginCnt>
       <RegisterCnt id="container-register">
         <p>계정이 없으신가요?</p>
-        <a href="/">가입하기</a>
+        <Link to="/">가입하기</Link>
       </RegisterCnt>
       <AppDown />
     </Article>

@@ -55,16 +55,20 @@ export const Ul = Styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
   .svg {
     fill: var(--color-black);
     font-size: 1.5rem;
   }
+
   a, button {
     margin-right: 15px;
   }
+
   button#icon-new_post {
     background-color: var(--color-white);
   }
+
   button:last-child {
     margin-right: 0;
     border-radius: 10px;
@@ -73,10 +77,12 @@ export const Ul = Styled.ul`
     font-weight: bold;
     color: var(--color-white);
   }
+
   @media (max-width: 600px) {
     a, button {
       margin-right: 5px;
     }
+
     button:last-child {
       padding: 5px 10px;
     }

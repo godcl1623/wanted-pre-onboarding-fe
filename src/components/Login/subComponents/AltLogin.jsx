@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LoginAltCnt, LoginFb } from '../style/LoginStyled';
 
 const AltLogin = () => {
@@ -6,11 +7,11 @@ const AltLogin = () => {
     <LoginAltCnt id="login-alt">
       <LoginFb id="login-fb">
         <img src="/assets/facebook.png" alt="facebook_logo" />
-        <a href="https://www.facebook.com/">Facebook으로 로그인</a>
+        <Link to="https://www.facebook.com/">Facebook으로 로그인</Link>
       </LoginFb>
-      <a id="forgot_pwd" href="/">
+      <Link id="forgot_pwd" to="/">
         비밀번호를 잊으셨나요?
-      </a>
+      </Link>
     </LoginAltCnt>
   );
 };
