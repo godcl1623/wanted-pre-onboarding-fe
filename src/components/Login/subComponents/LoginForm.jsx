@@ -3,14 +3,14 @@ import { Form, Input, InputBtn } from '../style/LoginStyled';
 
 const LoginForm = (props) => {
   const { refs, states, handlers } = props;
-  const { inputIdEle, inputPwdEle } = refs;
+  const { inputEleId, inputElePwd } = refs;
   const { isIdValid, isPwdValid, isValidationPassed } = states;
   const { handleSubmit, handleChange, handleBlur } = handlers;
 
   return (
     <Form id="login-form" onSubmit={handleSubmit}>
       <Input
-        ref={inputIdEle}
+        ref={inputEleId}
         className={isIdValid === false ? 'invalid' : ''}
         type="text"
         name="user_id"
@@ -19,7 +19,7 @@ const LoginForm = (props) => {
         onBlur={handleBlur}
       />
       <Input
-        ref={inputPwdEle}
+        ref={inputElePwd}
         className={isPwdValid === false ? 'invalid' : ''}
         type="password"
         name="password"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserCmts as EmptyUserCmts } from '../style/FeedsStyled';
+import { EmptyUserCmts } from '../style/FeedsStyled';
 import Comment from './UserCmts/Comment';
 
 const UserCmts = ({ dataArray, className }) => {

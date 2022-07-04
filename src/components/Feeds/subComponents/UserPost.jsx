@@ -1,9 +1,11 @@
 import React from 'react';
-import { UserPost as EmptyPost } from '../style/FeedsStyled';
+import { EmptyPost } from '../style/FeedsStyled';
 import UserId from './Common/UserId';
 import UserTags from './UserPost/UserTags';
 
-const UserPost = ({ author, text, dataArray }) => {
+const UserPost = (props) => {
+  const { author, text, dataArray } = props;
+
   return (
     <EmptyPost>
       <UserId className="user_id svg" value={author} />

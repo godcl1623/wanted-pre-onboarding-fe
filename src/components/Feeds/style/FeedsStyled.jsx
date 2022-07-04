@@ -1,14 +1,5 @@
 import Styled from 'styled-components';
 
-/*
-  # 스타일 기준
-  1. 박스 계층(margin, border, padding)
-  2. 콘텐츠 레이아웃 - 위치, 크기, 내부 배치 순 (position, width, height, display)
-  3. 내부 스타일 (색상 등)
-  4. 콘텐츠 (크기, 색상 순)
-*/
-
-// article
 export const Article = Styled.article`
   margin-bottom: 20px;
   border: 1px solid var(--color-border);
@@ -31,8 +22,7 @@ export const Article = Styled.article`
   }
 `;
 
-// section
-export const FeedsHeading = Styled.section`
+export const EmptyHeading = Styled.section`
   border-radius: 15px 15px 0 0;
   padding: 10px;
   height: 60px;
@@ -48,7 +38,7 @@ export const UserInfoCnt = Styled.section`
   align-items: center;
 `;
 
-export const IconsCnt = Styled.section`
+export const ViewerActivityMenu = Styled.section`
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -67,7 +57,7 @@ export const IconsCnt = Styled.section`
   }
 `;
 
-export const IconsMenu = Styled.section`
+export const EmptyIconsCnt = Styled.section`
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -82,13 +72,13 @@ export const LikesCnt = Styled.section`
   font-weight: bold;
 `;
 
-export const UserPost = Styled.section`
+export const EmptyPost = Styled.section`
   padding: 5px 16px;
   background-color: var(--color-white);
   font-size: 14px;
 `;
 
-export const UserCmts = Styled(UserPost)`
+export const EmptyUserCmts = Styled(EmptyPost)`
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -102,7 +92,7 @@ export const UserCmts = Styled(UserPost)`
   }
 `;
 
-export const CmtsInput = Styled(FeedsHeading)`
+export const EmptyInput = Styled(EmptyHeading)`
   border-top: 1px solid var(--color-border);
   border-radius: 0 0 15px 15px;
 
@@ -112,7 +102,6 @@ export const CmtsInput = Styled(FeedsHeading)`
   }
 `;
 
-// div
 export const ImgWrapper = Styled.div`
   margin-right: 10px;
   border-radius: 50%;
@@ -143,24 +132,22 @@ export const ImgWrapper = Styled.div`
   }
 `;
 
-// span
-export const UserId = Styled.span`
+export const EmptyUserId = Styled.span`
   margin-right: 10px;
   font-weight: bold;
 `;
 
-export const Tags = Styled.span`
+export const TagsCnt = Styled.span`
   margin-left: 5px;
   font-size: 14px;
   color: purple;
   cursor: pointer;
 `;
 
-export const CmtsLike = Styled.span`
+export const CmtsLikeIconWrapper = Styled.span`
   margin-left: auto;
 `;
 
-// form
 export const Form = Styled.form`
   width: 100%;
 
@@ -175,14 +162,12 @@ export const Form = Styled.form`
   }
 `;
 
-// input
 export const Input = Styled.input`
   height: 40px;
   font-size: 16px;
   font-weight: normal;
 `;
 
-// button
 export const Button = Styled.button`
   padding: 0;
   height: max-content;

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Main from './components/Global/Main';
-import Login from './components/Login/Login';
+import Main from './pages/Main';
+import Login from './pages/Login';
 import Gnb from './components/Gnb/Gnb';
 import Feeds from './components/Feeds/Feeds';
 
@@ -17,7 +17,7 @@ function App() {
   const loginComp = <Login signedUser={userInfo} setLoginStat={setLoginStat} />;
   const feedsComp = feedsData ? (
     feedsData.map((data, idx) => (
-      <Feeds key={idx} signedUser={userInfo} feedData={data} />
+      <Feeds key={`${data}_${idx}`} signedUser={userInfo} feedData={data} />
     ))
   ) : (
     <Feeds signedUser={userInfo} />

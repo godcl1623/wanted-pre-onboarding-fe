@@ -1,18 +1,18 @@
 import React from 'react';
 import { FaRegBookmark } from 'react-icons/fa';
 import { TbMessageCircle2, TbHeart, TbSend } from 'react-icons/tb';
-import { IconsMenu as EmptyIcons, Button } from '../style/FeedsStyled';
+import { EmptyIconsCnt, Button } from '../style/FeedsStyled';
 
 const IconsMenu = () => {
   const leftIcons = [TbHeart, TbMessageCircle2, TbSend];
   return (
-    <EmptyIcons>
+    <EmptyIconsCnt>
       <section>
         {leftIcons.map((icon, idx) => {
-          const IconComponent = icon;
+          const IconAsComponent = icon;
           return (
             <Button key={`icon_${idx}`}>
-              <IconComponent className="svg" />
+              <IconAsComponent className="svg" />
             </Button>
           );
         })}
@@ -20,7 +20,7 @@ const IconsMenu = () => {
       <Button>
         <FaRegBookmark className="svg" />
       </Button>
-    </EmptyIcons>
+    </EmptyIconsCnt>
   );
 };
 

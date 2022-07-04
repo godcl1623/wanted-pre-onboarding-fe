@@ -1,19 +1,9 @@
 import Styled from 'styled-components';
 
-/*
-  # 스타일 기준
-  1. 박스 계층(margin, border, padding)
-  2. 콘텐츠 레이아웃 - 위치, 크기, 내부 배치 순 (position, width, height, display)
-  3. 내부 스타일 (색상 등)
-  4. 콘텐츠 (크기, 색상 순)
-*/
-
-// article
 export const Article = Styled.article`
   width: 350px;
 `;
 
-// section
 export const BasicSection = Styled.section`
   display: flex;
   flex-direction: column;
@@ -91,16 +81,14 @@ export const DownCnt = Styled(BasicSection)`
   }
 `;
 
-// form
 export const Form = Styled.form`
   margin-top: 40px;
   display: flex;
   flex-direction: column;
 `;
 
-// input
 export const Input = Styled.input`
-  margin-bottom: ${(props) => props.marginBottom || '7px'};
+  margin-bottom: ${(props = '7px') => props.marginBottom};
   border: 1px solid var(--color-border);
   border-radius: 3px;
   padding: 10px;
@@ -115,7 +103,6 @@ export const InputBtn = Styled.input`
   color: var(--color-white);
 `;
 
-// span
 export const Span = Styled.span`
   position: absolute;
   top: 0;
@@ -129,7 +116,6 @@ export const Span = Styled.span`
   color: var(--color-font);
 `;
 
-// hr
 export const Hr = Styled.hr`
   border-bottom: 1px solid var(--color-border);
 `;
