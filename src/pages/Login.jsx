@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import LoginForm from './subComponents/LoginForm';
-import AltLogin from './subComponents/AltLogin';
-import AppDown from './subComponents/AppDown';
-import * as LoginStyles from './style/LoginStyled';
-import * as LoginLogics from './logic/LoginLogic';
+import LoginForm from '../components/Login/subComponents/LoginForm';
+import AltLogin from '../components/Login/subComponents/AltLogin';
+import AppDown from '../components/Login/subComponents/AppDown';
+import * as LoginStyles from '../components/Login/style/LoginStyled';
+import * as LoginLogics from '../components/Login/logic/LoginLogic';
 
 const Login = (props) => {
   const inputId = useRef();

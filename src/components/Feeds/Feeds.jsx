@@ -9,10 +9,10 @@ import * as FeedsStyled from './style/FeedsStyled';
 
 const Feeds = ({ signedUser, feedData }) => {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
-  const [newCmt, setNewCmt] = useState([]);
+  const [prevCmt, setCmtTo] = useState([]);
 
   const addNewCmt = (newIpt) => {
-    setNewCmt((newCmt) => [...newCmt, newIpt]);
+    setCmtTo((prevCmt) => [...prevCmt, newIpt]);
   };
 
   function handleSubmit(event) {
@@ -27,8 +27,9 @@ const Feeds = ({ signedUser, feedData }) => {
 
   useEffect(() => {
     if (feedData) {
+      const { postInfo } = feedData;
       const img = new Image();
-      img.src = feedData.postInfo.picture;
+      img.src = postInfo.picture;
       img.onload = function () {
         setIsImgLoaded(true);
       };
@@ -37,25 +38,26 @@ const Feeds = ({ signedUser, feedData }) => {
   }, [feedData]);
 
   if (feedData && isImgLoaded) {
+    const { author, postInfo, comments } = feedData;
     return (
       <Article className="container-feeds">
-        <FeedsHeading author={feedData.author.nickname} />
-        <PostImg src={feedData.postInfo.picture} />
+        <FeedsHeading author={author.nickname} />
+        <PostImg src={postInfo.picture} />
         <IconsCnt
           className="container-activi
         ties-heading-feeds"
         >
           <IconsMenu />
           <LikesCnt className="container-likes_counter-heading-feeds">
-            좋아요 {feedData.postInfo.likes}개
+            좋아요 {postInfo.likes}개
           </LikesCnt>
         </IconsCnt>
         <UserPost
-          author={feedData.author.nickname}
-          text={feedData.postInfo.text}
-          dataArray={feedData.postInfo.tags}
+          author={author.nickname}
+          text={postInfo.text}
+          dataArray={postInfo.tags}
         />
-        <UserCmts dataArray={feedData.comments.concat(newCmt)} />
+        <UserCmts dataArray={comments.concat(prevCmt)} />
         <CmtsInput handleSubmit={handleSubmit} />
       </Article>
     );

@@ -1,43 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsPlusSquare } from 'react-icons/bs';
 import { AiOutlineCompass, AiOutlineHeart, AiFillHome } from 'react-icons/ai';
 import { FaRegPaperPlane } from 'react-icons/fa';
 import * as GnbStyled from './style/GnbStyled';
 
 const Gnb = ({ setLoginStat }) => {
-  function handleClick(event) {
+  const logoutUser = event => {
     alert('로그아웃 되었습니다.');
     localStorage.removeItem('auth');
     setLoginStat(false);
+  };
+
+  function handleClick(event) {
+    logoutUser(event);
   }
 
   return (
     <Nav id="global-nav">
       <section className="area_delimiter">
-        <a href="/">
+        <Link to="/">
           <img src="/assets/logo.png" alt="logo" />
-        </a>
+        </Link>
       </section>
       <section className="area_delimiter">
         <Input type="text" id="search-input" placeholder="검색" />
       </section>
       <section className="area_delimiter">
         <Ul id="list-icons">
-          <a id="icon-home">
+          <Link to="/" id="icon-home">
             <AiFillHome className="svg" />
-          </a>
-          <a id="icon-inbox">
+          </Link>
+          <Link to="/" id="icon-inbox">
             <FaRegPaperPlane className="svg" />
-          </a>
+          </Link>
           <button id="icon-new_post">
             <BsPlusSquare className="svg" />
           </button>
-          <a id="icon-explore">
+          <Link to="/" id="icon-explore">
             <AiOutlineCompass className="svg" />
-          </a>
-          <a id="icon-activity">
+          </Link>
+          <Link to="/" id="icon-activity">
             <AiOutlineHeart className="svg" />
-          </a>
+          </Link>
           <button id="btn-logout" onClick={handleClick}>
             Logout
           </button>
@@ -49,4 +54,4 @@ const Gnb = ({ setLoginStat }) => {
 
 export default Gnb;
 
-const { Nav, Section, Form, Input, Ul } = GnbStyled;
+const { Nav, Input, Ul } = GnbStyled;

@@ -1,14 +1,5 @@
 import Styled from 'styled-components';
 
-/*
-  # 스타일 기준
-  1. 박스 계층(margin, border, padding)
-  2. 콘텐츠 레이아웃 - 위치, 크기, 내부 배치 순 (position, width, height, display)
-  3. 내부 스타일 (색상 등)
-  4. 콘텐츠 (크기, 색상 순)
-*/
-
-// article
 export const Article = Styled.article`
   margin-bottom: 20px;
   border: 1px solid var(--color-border);
@@ -31,7 +22,6 @@ export const Article = Styled.article`
   }
 `;
 
-// section
 export const FeedsHeading = Styled.section`
   border-radius: 15px 15px 0 0;
   padding: 10px;
@@ -112,7 +102,6 @@ export const CmtsInput = Styled(FeedsHeading)`
   }
 `;
 
-// div
 export const ImgWrapper = Styled.div`
   margin-right: 10px;
   border-radius: 50%;
@@ -143,7 +132,6 @@ export const ImgWrapper = Styled.div`
   }
 `;
 
-// span
 export const UserId = Styled.span`
   margin-right: 10px;
   font-weight: bold;
@@ -160,7 +148,6 @@ export const CmtsLike = Styled.span`
   margin-left: auto;
 `;
 
-// form
 export const Form = Styled.form`
   width: 100%;
 
@@ -175,14 +162,12 @@ export const Form = Styled.form`
   }
 `;
 
-// input
 export const Input = Styled.input`
   height: 40px;
   font-size: 16px;
   font-weight: normal;
 `;
 
-// button
 export const Button = Styled.button`
   padding: 0;
   height: max-content;

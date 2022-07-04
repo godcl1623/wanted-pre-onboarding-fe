@@ -1,14 +1,5 @@
 import Styled from 'styled-components';
 
-/*
-  # 스타일 기준
-  1. 박스 계층(margin, border, padding)
-  2. 콘텐츠 레이아웃 - 위치, 크기, 내부 배치 순 (position, width, height, display)
-  3. 내부 스타일 (색상 등)
-  4. 콘텐츠 (크기, 색상 순)
-*/
-
-// nav
 export const Nav = Styled.nav`
   border-bottom: 1px solid var(--color-border);
   padding: 0 20px;
@@ -47,7 +38,6 @@ export const Nav = Styled.nav`
   }
 `;
 
-// input
 export const Input = Styled.input`
   margin-left: 10px;
   border-radius: 10px;
@@ -60,7 +50,7 @@ export const Input = Styled.input`
   font-size: 16px;
   font-weight: normal;
 `;
-// ul
+
 export const Ul = Styled.ul`
   display: flex;
   justify-content: center;
